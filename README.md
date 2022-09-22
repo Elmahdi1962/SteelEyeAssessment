@@ -1,4 +1,4 @@
-## What the simple List component does
+# What the simple List component does
 -   Detailed : 
 
     the `List` component is a memoized copy of the component `SingleListItem` using Memo hook, and the latter gets an items property which is an array of objects of this shape `{text: 'some string'}`, and it will render a `SingleListItem` component for each item or object in the array, so before doing so its creating a state to save the seleted item's index and on each rerender it resets the selected index to null,
@@ -8,7 +8,7 @@
 
     the `List` get an array of objects wich are data to display and renders childrens `SingleListItem` components and pass them the data they need to display and also the click handler to update the state to know which list item is selected
 
-## Warnings and Errors
+# Warnings and Errors
 -   syntax error that resulted in weird erros in the console that make no sense
 which is :
 `Calling PropTypes validators directly is not supported by the 'prop-types' package.
@@ -92,7 +92,7 @@ The fix is to add the key prop with a unique value i choose here the index
     ```
     The fix is to not call the function and no need to pass the index its alredy in the function definition passed from the parent `WrappedListComponent`
 
-## Other Updates and changes
+# Other Updates and changes
 -   Removed the index property from the `SingleListItem` component and from its proTypes because it's not used
 -   Add an initial value in the state as null `const [selectedIndex, setSelectedIndex] = useState(null);`
 

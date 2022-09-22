@@ -25,7 +25,7 @@ Use PropTypes.checkPropTypes() to call them.`
     problem is in `array` and `shapeof` 
 
     The fix is to change them to : `arrayOf` and `shape`
-
+---------------
 -   TypeError when using setSelectedIndex to update state 
     
     ```const [setSelectedIndex, selectedIndex] = useState();```
@@ -54,6 +54,7 @@ Use PropTypes.checkPropTypes() to call them.`
     ```
     const [selectedIndex, setSelectedIndex] = useState();
     ```
+---------------
 
 -   Each child should have a unique key
 The fix is to add the key prop with a unique value i choose here the index
@@ -68,6 +69,7 @@ The fix is to add the key prop with a unique value i choose here the index
             />
         ))}
         ```
+---------------
 
 -   Invalid prop type passing num instead of bool in `isSelected`
     ```
@@ -85,6 +87,7 @@ The fix is to add the key prop with a unique value i choose here the index
     The Fix is
 
     ```isSelected={selectedIndex === index}```
+---------------
 
 -   Rendering problem warning in `WrappedSingleListItem` produced because of calling a function inside an onClick event instead of passing it a function reference or defining one using arrow functions 
     ```
